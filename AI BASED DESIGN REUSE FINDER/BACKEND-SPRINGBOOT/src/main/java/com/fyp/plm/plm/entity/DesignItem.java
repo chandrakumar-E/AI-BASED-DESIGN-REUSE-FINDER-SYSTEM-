@@ -30,6 +30,62 @@ public class DesignItem {
 
     private LocalDateTime createdDate;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(String itemId) {
+        this.itemId = itemId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public List<DesignRevision> getRevisions() {
+        return revisions;
+    }
+
+    public void setRevisions(List<DesignRevision> revisions) {
+        this.revisions = revisions;
+    }
+
     @OneToMany(mappedBy = "designItem", cascade = CascadeType.ALL)
     private List<DesignRevision> revisions;
 }
